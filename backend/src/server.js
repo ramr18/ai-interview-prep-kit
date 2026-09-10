@@ -4,6 +4,7 @@ import session from "express-session";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import MongoStore from "connect-mongo";
+import { pathToFileURL } from "node:url";
 import { env, isProduction } from "./config/env.js";
 import { getRepository } from "./repos/repo.js";
 import { authRouter } from "./routes/auth.js";
@@ -71,7 +72,8 @@ export async function createServer() {
 }
 
 // Only listen when run directly (not when imported by tests/batch).
-if (import.meta.url === `file://${process.argv[1]}`) {
+const launchedDirectly = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
+if (launchedDirectly) {
   const repo = await getRepository();
   const app = await createServer();
   app.locals.repo = repo;
