@@ -1,0 +1,14 @@
+[
+  {
+    "id": "thin",
+    "jd": "Senior React developer. 5+ years experience.",
+    "company_url": "https://example.com",
+    "days": 3
+  },
+  {
+    "id": "full",
+    "jd": "We are looking for a Senior Full-Stack Engineer to join our team. You will build scalable APIs and frontend features using Node.js and React. You will mentor junior engineers and participate in code reviews. You will work closely with product and design. Required: 5+ years of experience with React and Node.js, strong SQL skills, experience with AWS or GCP. Preferred: experience with Kubernetes and Docker, familiarity with TypeScript. You will be responsible for CI/CD pipelines and on-call rotations.",
+    "company_url": "https://example.com",
+    "days": 7
+  }
+]

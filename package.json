@@ -1,0 +1,16 @@
+{
+  "name": "ai-interview-prep-kit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Turn a job description into a personalised interview preparation kit.",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "evaluate": "node backend/src/batch/runEvaluate.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

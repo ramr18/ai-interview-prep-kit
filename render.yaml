@@ -1,0 +1,42 @@
+# Render Blueprint - deployable as-is on the free tier.
+# 1. Create a free MongoDB Atlas cluster and copy its URI.
+# 2. In the Render dashboard set MONGODB_URI and GEMINI_API_KEY (sync: false
+#    below means you supply them once in the dashboard, never commit them).
+# 3. Push this repo, then "New > Blueprint" pointing at this file.
+services:
+  - type: web
+    name: prepkit-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: REPOSITORY
+        value: mongo
+      - key: MONGODB_URI
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: LLM_PROVIDER
+        value: gemini
+      - key: ALLOW_PRIVATE_URLS
+        value: "false"
+      - key: ALLOWED_ORIGINS
+        value: https://prepkit-web.onrender.com
+
+  - type: web
+    name: prepkit-web
+    runtime: node
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_API_BASE
+        value: https://prepkit-api.onrender.com

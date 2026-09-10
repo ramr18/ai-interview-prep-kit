@@ -1,0 +1,14 @@
+# Local development: starts MongoDB (the only external service the app needs).
+#   docker compose up -d
+# then run the API (`npm --prefix backend run dev`) and the web app
+# (`npm --prefix frontend run dev`).
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+volumes:
+  mongo-data:

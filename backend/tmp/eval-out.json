@@ -1,0 +1,426 @@
+{
+  "results": [
+    {
+      "id": "thin",
+      "kit": {
+        "id": "kit-thin",
+        "caseId": "thin",
+        "userId": null,
+        "status": "complete",
+        "createdAt": "2026-09-09T17:48:52.177Z",
+        "updatedAt": "2026-09-09T17:48:56.058Z",
+        "input": {
+          "jd": "Senior React developer. 5+ years experience.",
+          "companyUrl": "https://example.com",
+          "days": 3,
+          "jdHash": "839811fa4e17660733f8d192"
+        },
+        "company": {
+          "name": "Example",
+          "website": "https://example.com",
+          "brief": "Example (https://example.com) - Example Domain This domain is for use in documentation examples without needing permission. Avoid use in operations. Learn more. Note: no hiring-process page was retrievable and no public discussion was found.",
+          "briefState": "generated",
+          "hiringProcess": {
+            "found": false,
+            "summary": "No hiring process page was retrievable.",
+            "stages": []
+          }
+        },
+        "role": {
+          "title": "Senior React developer.",
+          "summary": "Role breakdown for \"Senior React developer.\": the description centres on 1 must-have theme and 0 nice-to-haves. The posting is thin, so this breakdown stays deliberately brief.",
+          "summaryState": "generated",
+          "requirements": [
+            {
+              "id": "r1",
+              "text": "+ years experience.",
+              "priority": "must",
+              "category": "other"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "id": "q1",
+            "category": "other",
+            "requirementIds": [
+              "r1"
+            ],
+            "text": "Why does \"+ years experience.\" matter in this role, and what would you point to as evidence you can deliver it?",
+            "answerOutline": "Connect the requirement to day-to-day work and give one concrete proof point from your history.",
+            "state": "generated"
+          },
+          {
+            "id": "q2",
+            "category": "other",
+            "requirementIds": [
+              "r1"
+            ],
+            "text": "Why does \"+ years experience.\" matter in this role, and what would you point to as evidence you can deliver it? Now make it harder: + years experience. under a constraint or a deadline.",
+            "answerOutline": "Connect the requirement to day-to-day work and give one concrete proof point from your history. Consider the constraint explicitly.",
+            "state": "generated"
+          },
+          {
+            "id": "q3",
+            "category": "company",
+            "requirementIds": [],
+            "text": "What draws you to Example, and how does your experience line up with what they do and how they hire?",
+            "answerOutline": "Reference something specific about the company (mission, product, hiring process); tie it to one real achievement of yours.",
+            "state": "generated"
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "f1",
+            "front": "Why does \"+ years experience.\" matter in this role, and what would you point to as eviden...",
+            "back": "Connect the requirement to day-to-day work and give one concrete proof point from your history.",
+            "requirementIds": [
+              "r1"
+            ],
+            "state": "generated",
+            "practice": {
+              "confidence": 0,
+              "reviewCount": 0
+            }
+          },
+          {
+            "id": "f2",
+            "front": "What draws you to Example, and how does your experience line up with what they do and how...",
+            "back": "Reference something specific about the company (mission, product, hiring process); tie it to one real achievement of yours.",
+            "requirementIds": [],
+            "state": "generated",
+            "practice": {
+              "confidence": 0,
+              "reviewCount": 0
+            }
+          },
+          {
+            "id": "f3",
+            "front": "The company: what does it do in one line?",
+            "back": "Example Domain This domain is for use in documentation examples without needing permission. Avoid use in operations. Learn more\nExample Domain This domain is f...",
+            "requirementIds": [],
+            "state": "generated",
+            "practice": {
+              "confidence": 0,
+              "reviewCount": 0
+            }
+          }
+        ],
+        "schedule": [
+          {
+            "day": 1,
+            "focus": "+ years experience. + 1 question",
+            "questionIds": [
+              "q1"
+            ],
+            "requirementIds": [
+              "r1"
+            ],
+            "durationMinutes": 30
+          },
+          {
+            "day": 2,
+            "focus": "Review & weak spots",
+            "questionIds": [],
+            "requirementIds": [],
+            "durationMinutes": 10
+          },
+          {
+            "day": 3,
+            "focus": "Question review + 2 questions",
+            "questionIds": [
+              "q2",
+              "q3"
+            ],
+            "requirementIds": [],
+            "durationMinutes": 15
+          }
+        ],
+        "notes": {
+          "thinDescription": true,
+          "noHiringPage": true,
+          "noDiscussion": true,
+          "message": "The job description is thin; the kit reflects only what the posting actually contains."
+        },
+        "research": {
+          "aboutSummary": "Example Domain This domain is for use in documentation examples without needing permission. Avoid use in operations. Learn more",
+          "whatTheyDo": "Example Domain This domain is for use in documentation examples without needing permission. Avoid use in operations. Learn more",
+          "values": [],
+          "hiringSummary": "No hiring process page was retrievable.",
+          "hiringStages": [],
+          "discussionSummary": "",
+          "discussionThemes": []
+        },
+        "gaps": [],
+        "valid": true,
+        "validationErrors": [],
+        "sources": [
+          {
+            "url": "https://example.com/",
+            "kind": "site",
+            "title": "",
+            "accessedAt": "2026-09-09T17:48:55.620Z"
+          },
+          {
+            "url": "https://example.com",
+            "kind": "site",
+            "skipped": true,
+            "reason": "no hiring page found"
+          }
+        ]
+      },
+      "ok": true,
+      "validationErrors": [],
+      "durationMs": 3887
+    },
+    {
+      "id": "full",
+      "kit": {
+        "id": "kit-full",
+        "caseId": "full",
+        "userId": null,
+        "status": "complete",
+        "createdAt": "2026-09-09T17:48:56.564Z",
+        "updatedAt": "2026-09-09T17:48:58.054Z",
+        "input": {
+          "jd": "We are looking for a Senior Full-Stack Engineer to join our team. You will build scalable APIs and frontend features using Node.js and React. You will mentor junior engineers and participate in code reviews. You will work closely with product and design. Required: 5+ years of experience with React and Node.js, strong SQL skills, experience with AWS or GCP. Preferred: experience with Kubernetes and Docker, familiarity with TypeScript. You will be responsible for CI/CD pipelines and on-call rotations.",
+          "companyUrl": "https://example.com",
+          "days": 7,
+          "jdHash": "25462c05a2cffb0275d74ba5"
+        },
+        "company": {
+          "name": "Example",
+          "website": "https://example.com",
+          "brief": "Example (https://example.com) - Example Domain This domain is for use in documentation examples without needing permission. Avoid use in operations. Learn more. Note: no hiring-process page was retrievable and no public discussion was found.",
+          "briefState": "generated",
+          "hiringProcess": {
+            "found": false,
+            "summary": "No hiring process page was retrievable.",
+            "stages": []
+          }
+        },
+        "role": {
+          "title": "We are looking for a Senior Full-Stack Engineer to join our",
+          "summary": "Role breakdown for \"We are looking for a Senior Full-Stack Engineer to join our\": the description centres on 2 must-have themes and 0 nice-to-haves.",
+          "summaryState": "generated",
+          "requirements": [
+            {
+              "id": "r1",
+              "text": "Required: 5+ years of experience with React and Node.js, strong SQL skills, experience with AWS or GCP.",
+              "priority": "must",
+              "category": "technical"
+            },
+            {
+              "id": "r2",
+              "text": "Preferred: experience with Kubernetes and Docker, familiarity with TypeScript.",
+              "priority": "must",
+              "category": "technical"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "id": "q1",
+            "category": "technical",
+            "requirementIds": [
+              "r1"
+            ],
+            "text": "Walk me through how you would approach \"Required: 5+ years of experience with React and Node.js, strong SQL skills, experience wi...\". What trade-offs would you weigh and how would you verify it works?",
+            "answerOutline": "Go concrete: the first step you take, the key decisions, how you validate the outcome, and the one thing most people miss.",
+            "state": "generated"
+          },
+          {
+            "id": "q2",
+            "category": "technical",
+            "requirementIds": [
+              "r1"
+            ],
+            "text": "Walk me through how you would approach \"Required: 5+ years of experience with React and Node.js, strong SQL skills, experience wi...\". What trade-offs would you weigh and how would you verify it works? Now make it harder: Required: 5+ years of experience with React and Node.js, st... under a constraint or a deadline.",
+            "answerOutline": "Go concrete: the first step you take, the key decisions, how you validate the outcome, and the one thing most people miss. Consider the constraint explicitly.",
+            "state": "generated"
+          },
+          {
+            "id": "q3",
+            "category": "technical",
+            "requirementIds": [
+              "r2"
+            ],
+            "text": "Walk me through how you would approach \"Preferred: experience with Kubernetes and Docker, familiarity with TypeScript.\". What trade-offs would you weigh and how would you verify it works?",
+            "answerOutline": "Go concrete: the first step you take, the key decisions, how you validate the outcome, and the one thing most people miss.",
+            "state": "generated"
+          },
+          {
+            "id": "q4",
+            "category": "technical",
+            "requirementIds": [
+              "r2"
+            ],
+            "text": "Walk me through how you would approach \"Preferred: experience with Kubernetes and Docker, familiarity with TypeScript.\". What trade-offs would you weigh and how would you verify it works? Now make it harder: Preferred: experience with Kubernetes and Docker, familiari... under a constraint or a deadline.",
+            "answerOutline": "Go concrete: the first step you take, the key decisions, how you validate the outcome, and the one thing most people miss. Consider the constraint explicitly.",
+            "state": "generated"
+          },
+          {
+            "id": "q5",
+            "category": "company",
+            "requirementIds": [],
+            "text": "What draws you to Example, and how does your experience line up with what they do and how they hire?",
+            "answerOutline": "Reference something specific about the company (mission, product, hiring process); tie it to one real achievement of yours.",
+            "state": "generated"
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "f1",
+            "front": "Walk me through how you would approach \"Required: 5+ years of experience with React and N...",
+            "back": "Go concrete: the first step you take, the key decisions, how you validate the outcome, and the one thing most people miss.",
+            "requirementIds": [
+              "r1"
+            ],
+            "state": "generated",
+            "practice": {
+              "confidence": 0,
+              "reviewCount": 0
+            }
+          },
+          {
+            "id": "f2",
+            "front": "Walk me through how you would approach \"Preferred: experience with Kubernetes and Docker,...",
+            "back": "Go concrete: the first step you take, the key decisions, how you validate the outcome, and the one thing most people miss.",
+            "requirementIds": [
+              "r2"
+            ],
+            "state": "generated",
+            "practice": {
+              "confidence": 0,
+              "reviewCount": 0
+            }
+          },
+          {
+            "id": "f3",
+            "front": "What draws you to Example, and how does your experience line up with what they do and how...",
+            "back": "Reference something specific about the company (mission, product, hiring process); tie it to one real achievement of yours.",
+            "requirementIds": [],
+            "state": "generated",
+            "practice": {
+              "confidence": 0,
+              "reviewCount": 0
+            }
+          },
+          {
+            "id": "f4",
+            "front": "The company: what does it do in one line?",
+            "back": "Example Domain This domain is for use in documentation examples without needing permission. Avoid use in operations. Learn more\nExample Domain This domain is f...",
+            "requirementIds": [],
+            "state": "generated",
+            "practice": {
+              "confidence": 0,
+              "reviewCount": 0
+            }
+          }
+        ],
+        "schedule": [
+          {
+            "day": 1,
+            "focus": "Required: 5+ years of experience with React… + 1 question",
+            "questionIds": [
+              "q1"
+            ],
+            "requirementIds": [
+              "r1"
+            ],
+            "durationMinutes": 30
+          },
+          {
+            "day": 2,
+            "focus": "Review & weak spots",
+            "questionIds": [],
+            "requirementIds": [],
+            "durationMinutes": 10
+          },
+          {
+            "day": 3,
+            "focus": "Review & weak spots",
+            "questionIds": [],
+            "requirementIds": [],
+            "durationMinutes": 10
+          },
+          {
+            "day": 4,
+            "focus": "Preferred: experience with Kubernetes and… + 1 question",
+            "questionIds": [
+              "q3"
+            ],
+            "requirementIds": [
+              "r2"
+            ],
+            "durationMinutes": 30
+          },
+          {
+            "day": 5,
+            "focus": "Question review + 1 question",
+            "questionIds": [
+              "q2"
+            ],
+            "requirementIds": [],
+            "durationMinutes": 15
+          },
+          {
+            "day": 6,
+            "focus": "Question review + 1 question",
+            "questionIds": [
+              "q4"
+            ],
+            "requirementIds": [],
+            "durationMinutes": 15
+          },
+          {
+            "day": 7,
+            "focus": "Question review + 1 question",
+            "questionIds": [
+              "q5"
+            ],
+            "requirementIds": [],
+            "durationMinutes": 15
+          }
+        ],
+        "notes": {
+          "thinDescription": false,
+          "noHiringPage": true,
+          "noDiscussion": true,
+          "message": ""
+        },
+        "research": {
+          "aboutSummary": "Example Domain This domain is for use in documentation examples without needing permission. Avoid use in operations. Learn more",
+          "whatTheyDo": "Example Domain This domain is for use in documentation examples without needing permission. Avoid use in operations. Learn more",
+          "values": [],
+          "hiringSummary": "No hiring process page was retrievable.",
+          "hiringStages": [],
+          "discussionSummary": "",
+          "discussionThemes": []
+        },
+        "gaps": [],
+        "valid": true,
+        "validationErrors": [],
+        "sources": [
+          {
+            "url": "https://example.com/",
+            "kind": "site",
+            "title": "",
+            "accessedAt": "2026-09-09T17:48:57.856Z"
+          },
+          {
+            "url": "https://example.com",
+            "kind": "site",
+            "skipped": true,
+            "reason": "no hiring page found"
+          }
+        ]
+      },
+      "ok": true,
+      "validationErrors": [],
+      "durationMs": 1493
+    }
+  ],
+  "total": 2,
+  "durationMs": 6387
+}
