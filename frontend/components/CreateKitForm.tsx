@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { api } from "../lib/api";
 
 export function CreateKitForm({ onCreated }: { onCreated: (id: string) => void }) {
@@ -10,6 +10,7 @@ export function CreateKitForm({ onCreated }: { onCreated: (id: string) => void }
   const [status, setStatus] = useState<string | null>(null);
   const [progress, setProgress] = useState<string[]>([]);
   const [busy, setBusy] = useState(false);
+  const [batchFile, setBatchFile] = useState<File | null>(null);
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,10 +19,31 @@ export function CreateKitForm({ onCreated }: { onCreated: (id: string) => void }
     setProgress([]);
 
     try {
-      const { id } = await api.createKit(jd, companyUrl, days);
-      setStatus("streaming");
-      await streamProgress(id);
-      onCreated(id);
+      if (batchFile) {
+        const text = await batchFile.text();
+        const parsed: unknown = JSON.parse(text);
+        if (!Array.isArray(parsed) || parsed.length === 0) throw new Error("Upload a JSON array of job description and company pairs");
+        const cases = parsed.map((item, index) => {
+          const value = item as Record<string, unknown>;
+          const caseJd = String(value.jd ?? value.description ?? "").trim();
+          const caseUrl = String(value.company_url ?? value.companyUrl ?? "").trim();
+          if (!caseJd || !caseUrl) throw new Error(`Upload item ${index + 1} needs jd and company_url`);
+          return { jd: caseJd, companyUrl: caseUrl, days: Number(value.days) || days };
+        });
+        setStatus("streaming");
+        let firstId = "";
+        for (const item of cases) {
+          const { id } = await api.createKit(item.jd, item.companyUrl, item.days);
+          if (!firstId) firstId = id;
+          await streamProgress(id);
+        }
+        onCreated(firstId);
+      } else {
+        const { id } = await api.createKit(jd, companyUrl, days);
+        setStatus("streaming");
+        await streamProgress(id);
+        onCreated(id);
+      }
     } catch (e: unknown) {
       setStatus("error");
       setProgress((p) => [...p, `Error: ${e instanceof Error ? e.message : "Failed to create kit"}`]);
@@ -83,6 +105,17 @@ export function CreateKitForm({ onCreated }: { onCreated: (id: string) => void }
             onChange={(e) => setCompanyUrl(e.target.value)}
             required
           />
+        </div>
+        <div>
+          <label className="label" htmlFor="batchFile">Or upload multiple roles</label>
+          <input
+            id="batchFile"
+            type="file"
+            accept=".json,application/json"
+            className="input text-sm file:mr-3 file:border-0 file:bg-transparent file:text-sm"
+            onChange={(e) => setBatchFile(e.target.files?.[0] || null)}
+          />
+          <p className="mt-1 text-xs text-slate-500">JSON array with jd, company_url, and optional days.</p>
         </div>
         <div>
           <label className="label" htmlFor="days">Days until interview</label>

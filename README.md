@@ -18,7 +18,7 @@ A full-stack web application that:
 | Layer | Technology | Justification |
 |-------|-----------|---------------|
 | Frontend | Next.js 15 + Tailwind CSS + TypeScript | Preferred stack from the brief; excellent DX, built-in SSR/proxy, and strong type safety |
-| Backend | Node.js + Express + TypeScript (ESM) | Preferred stack; minimal, well-understood, easy to deploy on free tiers |
+| Backend | Node.js + Express + JavaScript (ESM) | Preferred stack; minimal, well-understood, easy to deploy on free tiers |
 | Database | MongoDB (via Mongoose) | Preferred stack; flexible schema for the nested kit documents; free tier available on Atlas and Render |
 | Scraping | Custom BFS crawler + cheerio | No external scraping service needed; follows robots.txt, respects rate limits, handles relative links |
 | LLM | Google Gemini (gemini-2.0-flash) | Genuine free tier (15 RPM, 1M TPM); fast enough for batch evaluation; falls back to a deterministic mock provider when no key is configured |
@@ -90,7 +90,7 @@ Tests cover schedule allocation, coverage checking, kit structure validation, an
 
 ### Deployment
 
-Deployed on Render using the provided `render.yaml` blueprint:
+Deploy on Render using the provided `render.yaml` blueprint:
 
 1. Push this repository to GitHub
 2. In Render, create a new Blueprint pointing at `render.yaml`
@@ -192,7 +192,7 @@ The pipeline is a deliberate sequence (`runPipeline.js`):
 
 8. **Schedule** — Allocated arithmetically in code (`schedule.js`), never handed to the model. Requirements are scored (must > nice, then category weight), sorted hardest-first, and distributed across exactly the requested number of days. Leftover questions go into the later half as review.
 
-9. **Validation** — The kit is validated against the canonical schema (`kitSchema.js`) plus cross-field rules: unique IDs, valid requirement references, contiguous schedule days, every must-have requirement in the schedule, integer durations.
+9. **Validation** — The kit is validated against the canonical schema (`kitSchema.js`) plus cross-field rules: unique IDs, valid requirement references, contiguous schedule days, every must-have requirement in both question coverage and the schedule, integer durations.
 
 ## State model for the builder
 
